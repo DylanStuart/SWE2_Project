@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class AddPlayer  {
     static Scanner scan = new Scanner(System.in);
-     int value = 0;
-     int dealerValue = 0;
-     int player2Value=0;
+     static int value = 0;
+     static int dealerValue = 0;
+     static int player2Value=0;
     public void PlayGame2(Hand Player, Hand Dealer,Hand Player2, Deck A){
         Player.DealHand(A);
         Dealer.DealHand(A);

@@ -1,14 +1,14 @@
 
-package SWE2_Project;
+//package SWE2_Project;
 
 import java.util.Scanner;
 public class Game {
     static Scanner scan = new Scanner(System.in);
      int value = 0;
      int dealerValue = 0;
-     public int gCount;
-     public int gWin ;
-     public int gLose ;
+     public static int gCount;
+     public static int gWin ;
+     public static int gLose ;
 
 
      public int gamePlayed() {
@@ -162,11 +162,3 @@ public class Game {
     
 
 }
-
-
-
-
-
-    
-   
-
