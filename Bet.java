@@ -1,3 +1,4 @@
+package SWE2_Project;
 import java.util.Scanner;
 public class Bet {
 
