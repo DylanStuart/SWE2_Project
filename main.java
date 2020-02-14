@@ -1,5 +1,3 @@
-
-
 package SWE2_Project;
 
 import java.util.Scanner;
@@ -36,8 +34,13 @@ public class main {
           case 3:
               break;
           case 4:
+           System.out.println("Adding player 2 to the Game ");
+           System.out.println("Starting game now...");
+          Hand Player1_1 =  new Hand();
+          Hand Player2 = new Hand();
+          Hand Dealer1_1 = new Hand();
           AddPlayer B = new AddPlayer();
-          B.PlayGame(Player,Player2,Dealer,A);
+          B.PlayGame2(Player1_1,Player2,Dealer1_1,A);
               break;
           case 5:
               break;
@@ -58,11 +61,3 @@ public class main {
     
 }
 }
-
-
-        
-        
-        
-        
-    
-
