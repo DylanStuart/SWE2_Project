@@ -1,3 +1,5 @@
+
+package SWE2_Project;
 import java.util.Scanner;
 public class AddPlayer  {
     static Scanner scan = new Scanner(System.in);
