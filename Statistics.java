@@ -3,31 +3,36 @@ package SWE2_Project;
 
 import java.util.Scanner;
 public class Statistics {
-    int win;
-    int lose;
-    int gameCount;
-    Game A = new Game();
+    static int win;
+    static int lose;
+    static int gameCount;
+//    Game A = new Game();
     Statistics () {
         this.win = 0;
         this.lose = 0;
         this.gameCount = 0;
     }
 
-    public void gamesPlayed () {
+    public static int gamesPlayed (Game A) {
         gameCount = A.gamePlayed();
-        System.out.println(gameCount);
-
+        System.out.println("Game count from Stats: " + gameCount);
+        return gameCount;
     }
 
-    public void gamesWon () {
+    public static int gamesWon (Game A) {
         win = A.playerWin();
-        System.out.println(win);
+        System.out.println("Game(s) won from stats: " + win);
+        return win;
     }
 
-    public void gamesLose () {
+
+    public int gamesLost (Game A) {
         lose = A.playerLose();
-        System.out.println(lose);
-    }
-
-    
+        System.out.println("Game(s) lost from stats: " + lose);
+        return lose;
+  }
+//
+//    public void percentages () {
+//        System.out.println("Your win percentage is: "+ win/gameCount);
+//    }
 }

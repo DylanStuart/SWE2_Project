@@ -6,16 +6,33 @@ public class Game {
     static Scanner scan = new Scanner(System.in);
      int value = 0;
      int dealerValue = 0;
-    public void PlayGame(Hand Player, Hand Dealer, Deck A){
+     public int gCount;
+     public int gWin ;
+     public int gLose ;
+
+
+     public int gamePlayed() {
+         return gCount;
+     }
+     public int playerWin() {
+         return gWin;
+     }
+
+     public int playerLose() {
+         return gLose;
+     }
+
+     public void PlayGame(Hand Player, Hand Dealer, Deck A){
+        gCount++;
+
         Player.DealHand(A);
         Dealer.DealHand(A);
         dealerValue = Dealer.getValue(0)+Dealer.getValue(1);
         int k = Dealer.HandCount();
-      
+
         int choice;
         Boolean WinOrLose = true;
-       
-        
+
         
         
         System.out.println("Your hand is :");
@@ -55,11 +72,13 @@ public class Game {
         System.out.println("Your current score is " + value );
         WinOrLose = CheckScore(value);
         if(WinOrLose == false){
+            gLose++;
+            System.out.println("Lose Count:" + gLose);
             System.out.println("YOU LOSE");
             break;
         }
         
-       
+
         
         
         
@@ -86,6 +105,7 @@ public class Game {
          System.out.println("The dealer current score is " + dealerValue);
          if(dealerValue >= 17){
              if(dealerValue > 21){
+                gWin++;
                  System.out.println("THE DEALER BUSTS");
              }
              
@@ -107,11 +127,13 @@ public class Game {
             //if neather the player or the dealer busts we will compair the scores.
             if(dealerValue <= 21 && value <= 21){
                 if(dealerValue >= value) {
+                    gLose++;
                     System.out.println("THE DEALER'S SCORE IS HIGHER OR TIED");
                     System.out.println("THE DEALER WINS");
                     
                 }
                 else{
+                    gWin++;
                     System.out.println("THE PLAYER'S SCORE IS HIGHER");
                     System.out.println("THE PLAYER WINS");
                 }
