@@ -1,4 +1,4 @@
-//package SWE2_Project;
+package SWE2_Project;
 import java.util.Random;
 import java.util.*;
 // SWE2 project
