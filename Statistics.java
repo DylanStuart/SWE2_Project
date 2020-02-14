@@ -1,5 +1,5 @@
 
-//package SWE2_Project;
+package SWE2_Project;
 
 import java.util.Scanner;
 public class Statistics {
