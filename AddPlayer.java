@@ -4,7 +4,7 @@ public class AddPlayer  {
      int value = 0;
      int dealerValue = 0;
      int player2Value=0;
-    public void PlayGame(Hand Player, Hand Dealer,Hand Player2, Deck A){
+    public void PlayGame2(Hand Player, Hand Dealer,Hand Player2, Deck A){
         Player.DealHand(A);
         Dealer.DealHand(A);
         Player2.DealHand(A);
